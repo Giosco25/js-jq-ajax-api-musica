@@ -22,19 +22,16 @@
 
 
      <script id="entry-template" type="text/x-handlebars-template">
-             <div class="cd">
-                 <img src="{{ poster }}" alt="">
+             <div class="cd {{ genere }}">
+                <img src="{{ poster }}" alt="">
                  <h3>{{ titolo }}</h3>
                  <span class="author">{{ artista }}</span>
                  <span class="year">{{ anno }}</span>
              </div>
      </script>
      <select name="music" id="genre_music">
-         <option value="rock">Rock</option>
-         <option value="pop">Pop</option>
-         <option value="metal">Metal</option>
-         <option value="jazz">Jazz</option>
-   </select>
+
+     </select>
 
         <script src="main.js" charset="utf-8"></script>
     </body>
