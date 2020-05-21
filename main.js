@@ -33,3 +33,23 @@ $(document).ready(function() {
 });
 
 // BONUS: creare una select con i generi dei dischi musicali (pop, rock, metal, jazz), tramite la quale si possono filtrare i dischi visualizzati (ad esempio: se nella tendina si seleziona il genere "metal", nella pagina saranno mostrati solo i dischi con il genere "metal").
+$('#genre_music').click(function(){
+    $.ajax({
+       'url':'https://flynn.boolean.careers/exercises/api/array/music',
+       'method': 'GET',
+       'success': function(data) {
+           console.log(data);
+           var musica = data.response;
+           console.log(musica)
+           // Ciclare tutti i generi musicali
+           for (var i = 0; i < musica.length; i++) {
+
+               var generi_musicali = musica[i].genre;
+               console.log(generi_musicali);
+               if (generi_musicali ==) {
+
+               }
+}
+}
+});
+})
