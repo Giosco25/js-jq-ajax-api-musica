@@ -18,15 +18,13 @@ $(document).ready(function() {
            for (var i = 0; i < musica.length; i++) {
 
                var disco_corrente = musica[i];
+
                var genere_musicali = disco_corrente.genre;
+
                if (!array_generi.includes(genere_musicali)) {
                    array_generi.push(genere_musicali);
 
                }
-
-               // console.log(disco_corrente);
-               // console.log(genere_musicali);
-
                // per ognuno di essi disegnare in pagina una card utilizzando handlebars.
                var segnaposto = {
                    'poster' : disco_corrente.poster,
@@ -41,7 +39,9 @@ $(document).ready(function() {
            console.log(array_generi);
            for (var i = 0; i < array_generi.length; i++) {
                var generi_salvati = array_generi[i];
+
                var html_option = '<option value="' + generi_salvati + '">'+ generi_salvati + '</option>';
+
                $('#genre_music').append(html_option);
                console.log(generi_salvati);
 
@@ -52,8 +52,11 @@ $(document).ready(function() {
 
 // BONUS: creare una select con i generi dei dischi musicali (pop, rock, metal, jazz), tramite la quale si possono filtrare i dischi visualizzati (ad esempio: se nella tendina si seleziona il genere "metal", nella pagina saranno mostrati solo i dischi con il genere "metal").
 $('#genre_music').change(function(){
+
   var genere_scelto = $(this).val();
+
  $('.cd').hide();
+
  $('.cd.' + genere_scelto).show();
 
 });
